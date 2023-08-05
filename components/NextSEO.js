@@ -4,19 +4,19 @@ export const MainSEO = () => {
   return (
     <>
       <NextSeo
-        title="Ephraim Atta-Duncan"
-        description="Software Developer and Software Engineer in Ghanna"
+        title="Kerimcan Başarır"
+        description="Python Developer in Turkey"
         openGraph={{
           type: 'website',
-          url: 'https://astrosaurus.me',
-          title: 'Ephraim Atta-Duncan',
-          description: 'Software Engineer in Ghana',
-          images: [{ url: 'https://astrosaurus.me/api/og' }],
-          siteName: 'Ephraim Atta-Duncan',
+          url: 'https://kerimcan.me',
+          title: 'Kerimcan Başarır',
+          description: 'Python Developer in Turkey',
+          images: [{ url: 'https://kerimcan.me/api/og' }],
+          siteName: 'Python Developer in Turkey',
         }}
         twitter={{
-          handle: '@EphraimDuncan_',
-          site: '@EphraimDuncan_',
+          handle: '@kerimcanba',
+          site: '@kerimcanba',
           cardType: 'summary_large_image',
         }}
         robotsProps={{
@@ -50,12 +50,12 @@ export const BlogSEO = ({ authorDetails, title, summary, date, lastmod, url, tag
             modifiedTime: modifiedAt,
             section: title,
 
-            authors: ['Ephraim Atta-Duncan', 'https://astrosaurus.me/'],
+            authors: ['Kerimcan Başarır', 'https://kerimcan.me/'],
             tags: tags,
           },
           images: [
             {
-              url: `https://astrosaurus.me/api/og?title=${title}`,
+              url: `https://kerimcan.me/api/og?title=${title}`,
               alt: title,
             },
           ],

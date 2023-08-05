@@ -19,7 +19,7 @@ const LayoutWrapper = ({ children }) => {
                     <Link
                       key={link.title}
                       href={link.href}
-                      className="p-2 mr-4 font-medium text-gray-900 sm:p-2 dark:text-gray-100 cursor-pointer  hover:underline hover:rounded "
+                      className="p-2 mr-4 font-medium sm:p-2 text-gray-600  dark:text-gray-300 cursor-pointer hover:text-black dark:hover:text-white"
                     >
                       {link.title}
                     </Link>
@@ -37,7 +37,6 @@ const LayoutWrapper = ({ children }) => {
           <Footer />
         </div>
       </SectionContainer>
-      {/* <FooterGradient /> */}
     </>
   );
 };
@@ -45,17 +44,9 @@ const LayoutWrapper = ({ children }) => {
 function HeaderGradient() {
   return (
     <div className="mx-auto max-w-6xl motion-safe:animate-rotate-colors pointer-events-none z-[-2]">
-      <div className="absolute inset-x-0 bg-gradient-to-r from-indigo-300 to-purple-400 opacity-30 blur-3xl top-[-64px] h-[200px]" />
+      <div className="absolute inset-x-0 bg-gradient-to-r from-indigo-300 to-purple-400 opacity-20 blur-3xl top-[-64px] h-[200px]" />
     </div>
   );
 }
-
-// function FooterGradient() {
-//   return (
-//     <div className="mx-auto max-w-6xl motion-safe:animate-rotate-colors pointer-events-none z-[-1]">
-//       <div className="absolute inset-x-0 bg-gradient-to-r from-amber-500 via-indigo-500 to-emerald-500 rounded-t-full opacity-20 blur-3xl h-[200px]" />
-//     </div>
-//   );
-// }
 
 export default LayoutWrapper;

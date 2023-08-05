@@ -19,18 +19,27 @@ export default function Home({ posts }) {
         description={siteMetadata.description}
       /> */}
       <div>
-        <h3 className="font-bold text-2xl mt-4 md:text-3xl tracking-tight  text-black dark:text-white">
-          Ephraim Atta-Duncan
+        <h3 className="font-bold text-xl mt-4 md:text-xl tracking-tight  text-black dark:text-white ">
+          Home
         </h3>
-        <p className="text-lg leading-7 text-gray-500 my-2 dark:text-gray-400">
-          I'm a developer, writer and an indie hacker building products for the web. I like open
-          source too.
+        <p className="text-sm leading-7 text-gray-500 my-2 dark:text-gray-400 ">
+          I am Kerimcan, a machine learning and AI researcher with a strong passion for education!
+          I'm trying to improve myself in the field of Computer Vision.
         </p>
+        <div className="flex justify-end text-base font-medium leading-6 mb-6">
+          <Link
+            href="/about"
+            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="blog posts"
+          >
+            About &rarr;
+          </Link>
+        </div>
       </div>
 
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-4 space-y-2 md:space-y-5">
-          <h3 className="font-bold text-2xl md:text-3xl tracking-tight my-4 text-black dark:text-white">
+          <h3 className="font-bold text-xl md:text-xl tracking-tight my-4 text-black dark:text-white">
             Recent Posts
           </h3>
         </div>
@@ -56,7 +65,7 @@ export default function Home({ posts }) {
           All Posts &rarr;
         </Link>
       </div>
-      <Link href="https://volt.fm/duncan">
+      <Link href="https://open.spotify.com/user/21l4svwour2yta36ranicusza">
         <NowPlaying />
       </Link>
     </>

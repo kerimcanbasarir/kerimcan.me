@@ -90,12 +90,14 @@ export default function NowPlaying() {
             {data.title}
           </a>
         ) : (
-          <p className="capsize text-gray-800 dark:text-gray-200 font-medium">Not Playing</p>
+          <p className="capsize text-gray-800 dark:text-gray-200 font-medium text-sm">
+            Not Playing
+          </p>
         )}
         <span className="capsize mx-2 text-gray-500 dark:text-gray-300 hidden sm:block">
           {' – '}
         </span>
-        <p className="capsize text-gray-500 dark:text-gray-300 max-w-max truncate">
+        <p className="capsize text-sm text-gray-500 dark:text-gray-300 max-w-max truncate">
           {data?.artist ?? 'Spotify'}
         </p>
       </div>

@@ -9,7 +9,7 @@ export default function BlogPostCard({ title, slug, index, date }) {
           <div className="flex flex-col sm:flex-row justify-between sm:items-center">
             <div className="flex items-center">
               <div className="text-gray-300 dark:text-gray-400 text-left mr-6">{index}</div>
-              <h4 className="text-base sm:text-lg font-medium w-full text-gray-800 dark:text-gray-100">
+              <h4 className="text-base sm:text-sm font-medium w-full text-gray-800 dark:text-gray-100">
                 {title}
               </h4>
             </div>

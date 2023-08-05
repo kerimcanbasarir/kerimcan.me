@@ -7,17 +7,19 @@ export default function Spotify() {
     <>
       {/* <PageSEO title="Spotify" description={siteMetadata.description} /> */}
       <div>
-        <h2 className="font-bold text-3xl tracking-tight mb-4 mt-8 text-black dark:text-white">
+        <h2 className="font-bold text-xl tracking-tight mb-4 mt-8 text-black dark:text-white">
           Top Tracks
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">
+        <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm ">
           Here's my top tracks on Spotify updated daily.
         </p>
         <Tracks track="top" />
-        <h2 className="font-bold text-3xl tracking-tight mb-4 mt-8 text-black dark:text-white">
+        <h2 className="font-bold text-xl tracking-tight mb-4 mt-8 text-black dark:text-white">
           Recent Tracks
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">Here's my recent tracks on Spotify.</p>
+        <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
+          Here's my recent tracks on Spotify.
+        </p>
         <Tracks track="recent" />
 
         <div className="mt-12">

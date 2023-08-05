@@ -14,7 +14,7 @@ export default async function (req) {
   const { searchParams } = new URL(req.url);
 
   const hasTitle = searchParams.has('title');
-  const title = hasTitle ? searchParams.get('title')?.slice(0, 100) : 'Ephraim Atta-Duncan';
+  const title = hasTitle ? searchParams.get('title')?.slice(0, 100) : 'Kerimcan Başarır';
 
   const isLongTitle = title.length > 30;
 
@@ -57,7 +57,7 @@ export default async function (req) {
               fontSize: '32px',
             }}
           >
-            astrosaurus.me
+            kerimcan.me
           </span>
         </div>
         <div
