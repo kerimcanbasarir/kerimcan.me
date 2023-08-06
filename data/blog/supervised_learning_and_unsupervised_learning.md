@@ -2,7 +2,7 @@
 title: 'Supervised Learning and Unsupervised Learning'
 date: 2023-08-05
 tags: ['Supervised Learning', 'Machine Learning', 'Unsupervised Learning']
-summary: 'Recursion in JavaScript and React Components'
+summary: 'machine learning notes'
 ---
 
 ## Table of Contents
