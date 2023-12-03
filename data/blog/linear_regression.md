@@ -8,8 +8,9 @@ summary: 'machine learning notes'
 ## Table of Contents
 
 <TOCInline toc={props.toc} exclude="Table of Contents" />
-
 # Regression
+
+![regg](./static/regg1.png)
 
 Regresyon, bir makine öğrenimi yöntemi olarak kullanılan bir süreçtir ve bir bağımlı değişkenin (hedef değişken) bir veya daha fazla bağımsız değişkenle (girdi değişkenleri) ilişkisini modellemeyi amaçlar. Regresyon analizi, bağımlı değişkenin sürekli bir değer alması durumunda uygulanır. Bu yöntem, bağımsız değişkenlerin değerlerine dayanarak bağımlı değişkenin tahmin edilmesini sağlamayı hedefler. Regresyon modelleri, veri noktalarının bir fonksiyon veya eğri üzerinde en iyi şekilde uymasını sağlar. Regresyon analizi, tahmin yapma, trendleri belirleme, ilişkileri anlama gibi birçok uygulama alanında kullanılan önemli bir yöntemdir.
 
@@ -21,11 +22,11 @@ Tek değişkenli regresyon, sadece bir bağımsız değişkenin (girdi değişke
 
 Diyelim ev boyuna göre fiyatını tahmin etmek istiyoruz. Burada X ekseni evin boyutu (size feet²), y ekseni de evin fiyatını 1000$ cinsinden temsil eden bir grafik var.
 
-![regg](/static/regg.png)
+![regg](./static/regg.png)
 
 Burada görünen her bir nokta, satılan evlerin boyutunu ve fiyatını temsil eden verilerdir. Bu grafik sayesinde bir evin yaklaşık değerini hesaplayabiliriz. 1250 fit²'lik bir evin fiyatını öğrenmek için veri setine dayalı olarak doğrusal regresyon modeli kullanmak, bizi yaklaşık bir değere ulaştıracaktır. Model, verilerimize göre düz bir çizgi oluşturur.
 
-![regg](/static/reg_line.png)
+![regg](./static/reg_line.png)
 
 Bu doğrusal çizgiye göre, 1250 fit²lik bir evin fiyatı yaklaşık 220 bin dolar olacaktır. Buna gözetimli öğrenme denir, çünkü modeli oluşturmak için cevapları verilmiş (ev fiyatı) örneklerden oluşan bir veri seti kullandık. Bu veri seti, hem evin boyutunu hem de evin fiyatını (cevaplarını) içerir. Böylece modelimiz, evin boyutuna göre ev fiyatını yaklaşık bir değerle tahmin etmeyi öğrenir.
 
@@ -55,7 +56,7 @@ Regresyon modeli, 200 bin, 1.5, -33.2 gibi sürekli sayıları tahmin eden göze
 | $𝑎$          | scalar, non bold                                                |                          |                     |
 | $𝐚$          | vector, bold                                                    |                          |                     |
 
-![learning_Alg](/static/learning_Algorithm.png)
+![learning_Alg](./static/learning_Algorithm.png)
 
 1. Eğitim Seti, yani eğitim seti, iki bileşenden oluşmaktadır: Özellikler veya girdiler (x - evin boyutu) ve Hedefler veya çıktılar (y - evin fiyatı).
 2. Modeli eğitmek için eğitim seti kullanılarak hem girdi özellikleri (özellikler) hem de çıktı hedefleri (hedefler), öğrenme algoritmasına beslenir.
@@ -70,7 +71,7 @@ $$𝑓𝑤,𝑏(𝑥) = wx + b $$
 
 w ve b sayıları için seçilen değerler, x girdilerini kullanarak ŷ çıktısını tahmin etmek için kullanılır. (w ve b parametreleri aşağıda açıklanmıştır)
 
-![f_fonk](/static/f_fonk.png)
+![f_fonk](./static/f_fonk.png)
 
 Algoritma bu veriden öğrenir ve en iyi uyan çizgiyi oluşturmaya çalışır. Lineer fonksiyon $f_w, b(x) = wx + b$ ile ifade edilir. Bu fonksiyonun amacı, buradaki $f(x)$ fonksiyonu çizgisini kullanarak y değerini tahmin etmektir ($y → ŷ$). İşte lineer regresyonun temeli budur. Bundan sonraki adım, maliyet (cost) fonksiyonunu oluşturmaktır.
 
@@ -81,7 +82,7 @@ Lineer Regresyon uygulamak için yapılması gereken ilk adım, maliyet (cost) f
 **Linear Fonksiyon**
 Eğitim setimiz (training set), girdi özellikleri (feature) x ve çıktı hedefleri (target) y içermektedir.
 
-![training_set](/static/training_set.png)
+![training_set](./static/training_set.png)
 
 Bu eğitim verisini (training data) beslemeyi amaçladığımız (fit) model, aşağıdaki gibi gösterilen bir lineer fonksiyondur:
 
@@ -101,13 +102,13 @@ $w$ ve $b$ için seçtiğimiz değerlere bağlı olarak farklı bir $f(x)$ fonks
 
 **örnek 1**
 
-![f_fonk_1](/static/f_fonk_1.png)
+![f_fonk_1](./static/f_fonk_1.png)
 
 Burada $w=0$ ve $b=1.5$ olduğunda, $f$ fonksiyonu yatay bir çizgi olur. Çünkü $w$ değeri 0 olduğu için $x$ ile çarpımı da 0 olacaktır. Yani $f$, her zaman sabit bir değeri temsil eder. Her zaman $ŷ$ (tahmini) değeri olarak 1.5 değerini alır.
 
 **örnek 2**
 
-![f_fonk_2](/static/f_fonk_2.png)
+![f_fonk_2](./static/f_fonk_2.png)
 
 $w=0.5$ ve $b=0$ olduğunda:
 
@@ -125,7 +126,7 @@ $f(3)$ = $f(x)= 0,5 x 3 + 0$ = 1.5 ---> 4.nokta oluşur.
 
 **Örnek 3**
 
-![f_fonk_3](/static/f_fonk_3.png)
+![f_fonk_3](./static/f_fonk_3.png)
 
 $w=0.5$ ve $b=1$ olduğunda:
 
@@ -141,7 +142,7 @@ $f(2)$ = $f(x)= 0,5 x 2 + 1$ = 2 ---> 3.nokta oluşur.
 $x=3$ ise:
 $f(3)$ = $f(x)= 0,5 x 3 + 1$ = 2,5 ---> 4.nokta oluşur.
 
-![y_hat](/static/y_hat.png)
+![y_hat](./static/y_hat.png)
 
 $f(x)$ fonksiyonundan elde edilen düz çizgi, veriye uygun olmalıdır. Notasyonları hatırlatmak adına, bir eğitim örneği $(x^i, y^i)$ olarak tanımlanır. $x^i$ olarak belirtilen bu giriş, $f$ fonksiyonu tarafından $y$'nin tahmini bir değeri üretir. Bu üretilen değer $ŷ$ olarak gösterilir.
 
@@ -173,7 +174,7 @@ Doğrusal modelimiz olan $f_{w,b}(x) = wx + b$, eğitim veri setimize tam olarak
 
 **Basitleştirilmiş Örnek**
 
-![basit](/static/basit.png)
+![basit](./static/basit.png)
 
 Bu basitleştirilmiş örnekte yukarıdaki örneğin aynısını aldık, ancak basitleştirmek amacıyla $b$ parametresini denklemden çıkartarak (0'a eşitleyerek) $f_w(x) = wx$ modelini oluşturduk. Yani çizgimiz artık orijinden geçiyor, çünkü $x=0$ olduğunda $f(x)$ de 0 olacaktır. Bu basitleştirilmiş modelle amacımız, $w$ için $J(w)$ fonksiyonunu küçültecek bir değeri bulmaktır.
 
@@ -187,7 +188,7 @@ $w (eğim)= 1$
 
 $j(1) = ?$
 
-![orn](/static/orn.png)
+![orn](./static/orn.png)
 
 Tabloya göre üç eğitim örneği sırasıyla (1,1), (2,2), (3,3) olarak gösterilmiştir. Bu veri seti özelinde $j$ cost fonksiyonunu $w = 1$ için hesaplayacağız, yani $j(1)$. Hatırlarsanız, $j$ cost fonksiyonu gerçek değerden tahmin edileni çıkarıp karesini alır ve her birini toplar, sonrasında $\frac{1}{2m}$'ye böler. Buna "hata kareler fonksiyonu" denir. Örneğimizde de bu formülü her bir eğitim verisi için uygulayacağız, yani $i=1$'den $m$'e kadar. Formül uygulandıktan sonra, bu veri seti özelinde $w=1$ iken $j(1) = 0$ çıktı. Soldaki grafiğimize çıkan sonucu işaretledik.
 
@@ -197,7 +198,7 @@ $w$ (eğim) = 0.5
 
 $j(0.5) = ?$
 
-![orn2](/static/orn2.png)
+![orn2](./static/orn2.png)
 
 Aynı eğitim veri örnekleri için bu sefer $w = 0.5$ için $j$ cost fonksiyonunu hesaplayacağız, yani $j(0.5)$ değerini bulacağız. İlk örnekte $x=1$ olduğunda $f(x)=0.5$ değerini alır. Bu nedenle ilk örneğin hata karesi $(0.5-1)^2$ olarak hesaplanır. İkinci örnekte $x=2$ olduğunda $f(x)=1$, bu örneğin hata karesi ise $(1-2)^2$ olarak hesaplanır. Üçüncü örnekte $x=3$ olduğunda $f(x)=1.5$, bu örneğin hatası ise $(1.5-3)^2$ olarak hesaplanır. Tüm eğitim örnekleri hesaplandıktan sonra, bu değerler toplanıp $1/2m$ ile çarpılır. Böylece $j(0.5) = 0.583$ olarak hesaplanır. Çıkan sonucumuzu soldaki grafikteki yerine yazıyoruz.
 
@@ -207,13 +208,13 @@ $w=0$
 
 $f(0) = ?$
 
-![orn3](/static/orn3.png)
+![orn3](./static/orn3.png)
 
 Aynı eğitim veri örnekleri için bu sefer $j$ cost fonksiyonunu $w = 0$ için hesaplayacağız, yani $j(0)$. Burada $f(x)$ tam olarak yatay çizgi olacaktır. Bu sebeple bütün tahmin edilen değerler 0'a eşit olacaktır, yani $f(x) = 0$. $j$ fonksiyonu ${1\over2m} \times (1^2 + 2^2 + 3^2)$ olacaktır. Bütün işlemlerden sonra çıkan sonuç ise $2.33$ yapar. Yani $j(0) = 2.33$.
 
 Farklı $w$ değerleri için cost fonksiyonunu hesaplayabilir ve grafiğini çizebiliriz. Bazı değerleri hesaplayarak, $j$ fonksiyonunun nasıl gözükeceğini görebiliriz.
 
-![orn4](/static/orn4.png)
+![orn4](./static/orn4.png)
 
 Yukarıdaki örneklerde seçtiğimiz farklı $w$ değerleri gibi daha farklı $w$ değerleri seçerek yukarıdaki grafiği oluşturabiliriz. Her bir nokta, farklı bir $f(x)$ çizgisini temsil etmektedir. Sonuç olarak çıkan bu "u" şeklindeki çizgimizin en düşük değeri $j(1)$ noktasıdır. Amacımız $min j(w)$ değerini bulmaktı ve böylelikle en uygun $w$ değerini elde ettik.
 
@@ -223,13 +224,13 @@ Bu örnekte daha kolay anlayabilmek için $b$ parametresi çıkartılmış ve ö
 
 Yukarıdaki basitleştirilmiş örneğimizde sadece $w$ parametresi alınarak $b = 0$'a eşitlenmiş ve 2 boyutlu görsel oluşturulmuştu. Bu görselleştirmede $w$ ve $b$ parametrelerini kullanarak nasıl bir görsel oluşturulduğunu ve asıl görselin nasıl okunduğunu açıklayacağız. Ancak bu tür görselleştirmeler büyük eğitim setlerinde etkili olmayabilir ve bu tür durumlarda Gradyan İnişi gibi diğer yöntemler kullanılmaktadır. Gradyan İnişi, en iyi $w$ ve $b$ değerlerini otomatik olarak bularak $J$ cost fonksiyonunu minimize etmeye yardımcı olur.
 
-![img1](/static/img1.png)
+![img1](./static/img1.png)
 
 Bu metindeki 3 boyutlu düzlem grafiği, $w$ ve $b$ olarak ayarlanmış eksenlerle gösterilir. $w$ ve $b$ değerleri değiştikçe, modelin iki parametresi olan $J(w,b)$ fonksiyonu için farklı değerler elde edilir. Her nokta, belirli bir $w$ ve $b$ değeri için $J$ noktasını temsil eder. Örneğin, $w=-10$ ve $b=-15$ ise, bu noktanın yüzeyden uzaklığı $J(-10, -15)$ noktasına karşılık gelen yükseklikle ölçülür.
 
 $J$ fonksiyonunun daha kullanışlı ve anlaşılır bir görselleştirmesi de mevcuttur.
 
-![img3](/static/img3.png)
+![img3](./static/img3.png)
 
 Sağ üstte gördüğünüz şey, aynı $J$ fonksiyonunun kontür grafiğidir. Dikey eksen $b$, yatay eksen ise $w$ değerlerini temsil eder. Kontür grafiği, 3 boyutlu yüzeyin farklı yüksekliklerini gösterir. Her bir elips, 3 boyutlu yüzeyin merkez noktasının aynı yüksekliğine denk gelir. Başka bir deyişle, bu elipslerin her biri aynı $J$ değerine karşılık gelir.
 
@@ -245,7 +246,7 @@ Sağ üstteki görseldeki $J$ fonksiyonunun en küçük değeri, halkaların tam
 
 $f(x) = -0.15x + 800$
 
-![12d](/static/12d.png)
+![12d](./static/12d.png)
 
 Grafikte belirli bir nokta gösterilmekte ve bu nokta $w$ ve $b$ parametrelerinin değerlerini temsil etmektedir. $w$ yaklaşık olarak $-0.15$ ve $b$ yaklaşık olarak $800$ olarak seçilmiştir. Bu parametrelerle oluşturulan $f(x)$ fonksiyonu sol tarafta çizilmiştir. Ancak bu fonksiyonun veri setine tam olarak uymadığı görülmektedir. Çünkü veri noktalarının çoğu bu fonksiyonun uzakında kalmaktadır. Bu nedenle $J$ grafiğindeki cost değeri oldukça yüksek ve minimum değere yakın değildir. Farklı $w$ ve $b$ değerleri seçilseydi, cost değeri daha düşük olabilirdi.
 
@@ -253,7 +254,7 @@ Grafikte belirli bir nokta gösterilmekte ve bu nokta $w$ ve $b$ parametrelerini
 
 $f(x) = 0x + 360$
 
-![13d](/static/13d.png)
+![13d](./static/13d.png)
 
 Bu örnek, veriye tam olarak uymasa da Örnek 1'den daha iyi bir seçim olabilir. "Kötünün iyisi" olarak adlandırılabilir. Bu nokta, $w$ ve $b$ parametrelerinin değerlerini temsil etmektedir. $w=0$ ve $b=360$ olarak seçilmiştir. Bu parametrelerle oluşturulan $f(x)$ fonksiyonu sol tarafta çizilmiştir. Bu fonksiyon yatay bir çizgidir çünkü $f(x) = 0 \cdot x + 360$ formülüne sahiptir, yani $w=0$ olduğu için.
 
@@ -261,7 +262,7 @@ Bu örnek, veriye tam olarak uymasa da Örnek 1'den daha iyi bir seçim olabilir
 
 $f(x) = -0.15x + 500$
 
-![14d](/static/14d.png)
+![14d](./static/14d.png)
 
 Bu örnekte farklı $w$ ve $b$ değerleri kullanılarak oluşturulan başka bir $f(x)$ çizgisi görülmektedir. Ancak bu çizginin veriye uygun olmadığı açıktır. Önceki örneğe göre daha kötü bir seçimdir. Cost değeri oldukça yüksektir ve minimuma ulaşmaktan uzaktır. Minimum nokta, en küçük elipsin ortasında yer almalıdır.
 
@@ -269,7 +270,7 @@ Bu örnekte farklı $w$ ve $b$ değerleri kullanılarak oluşturulan başka bir 
 
 $f(x) = 0.13x + 71$
 
-![15d](/static/15d.png)
+![15d](./static/15d.png)
 
 Son örnek olarak, sol taraftaki $f(x)$ fonksiyonunun veriye çok daha uygun olduğu görülmektedir. Sağdaki grafikte, cost (hata) fonksiyonunu temsil eden noktanın en küçük elipsin merkezine yakın olduğu görülmektedir. Tam olarak minimum değeri ifade etmese de oldukça yakındır. Bu $w$ ve $b$ değerleri ile sol taraftaki $f(x)$ çizgisi oluşturulmuştur. Her veri noktası için tahmin edilen değer ile gerçek değer arasındaki dikey mesafeyi ölçerek hatayı hesaplayabiliriz. Bütün veri noktaları için hata karelerinin toplamını hesapladığımızda, olası bütün düz çizgiler arasında en düşük hataya sahip olanı seçmiş oluruz.
 
@@ -305,13 +306,13 @@ Bu örnekte sağ ve sol yönlerdeki gradient descent işlemlerini ele alalım:
 
 **Sağa Doğru Gradient Descent:**
 
-![right_gradient](/static/right_gradient.png)
+![right_gradient](./static/right_gradient.png)
 
 Daha önce $b$ parametresini geçici olarak 0 olarak kabul ettiğimizi hatırlayalım. Bu durumda sadece $w$ parametresi bulunuyor. Eksenlerde yatayda $w$ parametresi, dikeyde ise $J(w)$ maliyet fonksiyonu yer alır. Dereceli azalmayı rastgele bir $w$ değeriyle başlatalım ve bu noktadan $J$ fonksiyonuna doğru bir çizgi çizelim. Dereceli azalma, $w$ değerini eski $w$ değerinden, alfa değeri çarpı türev ifadesinden çıkararak günceller. Bu türev ifadesi, $J(w)$ fonksiyonunun o noktadaki eğiminin negatifini temsil eder. Yani, bu çizgi, eğrinin o noktadaki teğetini temsil eder. Eğer teğet çizgisi sağa yukarıya doğru ilerliyorsa, eğim pozitif demektir (türev pozitif bir sayıdır). Bu durumda, güncellenen $w$ değeri, $w - \alpha$ pozitif bir sayı olur. Eğim pozitif olduğundan, sola doğru hareket ediyor ve $w$ değerini azaltıyoruz. Amacımız $J$ değerini azaltmak olduğundan, bu adım doğru bir yönde atılıyor gibi görünüyor.
 
 **Sola Doğru Gradient Descent:**
 
-![left_gradient](/static/left_gradient.png)
+![left_gradient](./static/left_gradient.png)
 
 Aynı mantığı bir adım geriye giderek düşünelim. Bu kez $w$ parametresini sol tarafta bir başlangıç değeri seçelim. Bu, $J$ fonksiyonunun o noktasına karşılık gelir. Türev ifadesi $dJ(w)/dw$ olup, bu noktadaki teğet çizgisine bakarsak, eğim negatif olacaktır. Bu durumda, $w$'yi güncellediğimizde, $w - \alpha$ negatif bir sayı olur. Bu da $w$ değerini artırır, çünkü negatif bir sayıdan çıkarmak, pozitif bir sayı eklemekle aynıdır. Dereceli azalmanın bu adımı, $J$ fonksiyonunun azaldığı sağa doğru bir yönde hareketi temsil eder.
 
@@ -321,27 +322,25 @@ Sonuç olarak, dereceli azalma yöntemi, fonksiyonun minimumunu veya maksimumunu
 
 Bir modeli eğitirken, Gradient Descent yöntemini kullanarak parametreleri güncellemek ve maliyet fonksiyonunu minimuma yaklaştırmak amacıyla adımlar atılır. Bu adımların büyüklüğünü belirleyen önemli bir parametre, öğrenme oranıdır.
 
-![gradian_inisi](/static/gradian_inisi.png)
+![gradian_inisi](./static/gradian_inisi.png)
 
 Öğrenme oranı, algoritmanın her iterasyonda ne kadar büyük bir adım atacağını belirleyen hiperparametredir. Öğrenme oranı çok küçükse, algoritma yakınsamak için çok fazla iterasyon gerektirecektir, bu da eğitim süresini uzatabilir.
 
-![gradient_small](/static/gradient_small.png)
+![gradient_small](./static/gradient_small.png)
 
 Öte yandan, öğrenme oranı çok yüksekse, algoritma vadinin diğer tarafına atlayabilir ve hatta daha önce bulunandan daha yükseğe çıkabilir. Bu, algoritmanın yakınsamayı atlamasına ve istenmeyen sonuçlara yol açabilir.
 
-![gradient_large](/static/gradient_large.png)
+![gradient_large](./static/gradient_large.png)
 
 Ayrıca, tüm maliyet fonksiyonları düz bir "kase" şeklinde olmayabilir. Çukurlar, sırtlar, platolar gibi çeşitli topografyalara sahip olabilirler. Şekil 4-6, Gradient Descent'in iki temel zorluğunu gösterir: Rastgele başlatılan bir algoritma soldan başlarsa, yerel minimuma doğru yakınsar. Sağdan başlarsa, düz bir plato üzerinde çok uzun bir süre geçirebilir ve asla global minimuma ulaşamayabilir.
 
-![gradient__](/static/gradient__.png)
+![gradient__](./static/gradient__.png)
 
 Neyse ki, Doğrusal Regresyon modeli için MSE maliyet işlevi dışbükey bir yapıya sahiptir; bu, eğri üzerinde herhangi iki noktayı seçtiğinizde, bu noktaları birleştiren doğru parçasının eğriyi asla geçmeyeceği anlamına gelir. Bu, yerel minimumların olmadığı, yalnızca bir küresel minimum olduğu anlamına gelir. Aynı zamanda, eğimi aniden değişmeyen sürekli bir fonksiyondur. Bu iki gerçeğin büyük bir sonucu vardır: Gradient Descent, global minimuma ulaşmada rastgele yaklaşmayı garanti eder (yeterince uzun süre beklerseniz ve öğrenme oranı çok yüksek değilse).
 
 Aslında, maliyet fonksiyonu bir "kase" şeklindedir, ancak özellikler farklı ölçeklere sahipse, bu kase uzun bir vadisi şeklini alabilir. Şekil 4-7, özellik 1 ve özellik 2'nin aynı ölçeğe sahip olduğu bir eğitim setinde (solda) ve özellik 1'in özellik 2'den çok daha küçük değerlere sahip olduğu bir eğitim setinde (sağda) Gradient Descent'i göstermektedir.
 
-![[gradient_y|500]]
-
-![gradient_y](/static/gradient_y.png)
+![gradient_y](./static/gradient_y.png)
 
 Gördüğünüz gibi, soldaki Gradient Descent algoritması doğrudan minimuma gidiyor ve bu nedenle hızla ulaşıyor. Sağda ise önce global minimuma neredeyse dik bir yönde ilerliyor ve daha sonra uzun bir yolculukla sona eriyor. Neredeyse düz bir vadiden aşağı iniyor. Sonunda minimum seviyeye ulaşacak, ancak bu uzun zaman alacaktır.
 
@@ -349,7 +348,7 @@ Bu şema ayrıca, bir modelin eğitiminin, bir maliyet fonksiyonunu (eğitim set
 
 #### Doğru Güncelleme
 
-![update](/static/update.png)
+![update](./static/update.png)
 
 **doğru güncelleme:**
 
@@ -544,4 +543,4 @@ print("Katsayılar:", katsayilar)
 print("Kesme Noktası:", kesme_noktasi)
 ```
 
-![örn_kod_2](/static/örn_kod_2.png)
+![örn_kod_2](./static/örn_kod_2.png)

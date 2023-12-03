@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "260ad33f8e9256d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b29fb14f16a1378",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "05b805fef97ecd76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linear_regression.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6f9e9a841256acca",
+    "type": "split",
+    "children": [
+      {
+        "id": "88a094737b1e3c1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "94ef9ffe371735e3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4edf44122ad9ca10",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a0124c3872379054",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "91fb60bf5dcabaf1",
+    "type": "split",
+    "children": [
+      {
+        "id": "7abecb845556ba7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da85557465d216ba",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "linear_regression.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "76f405dde65d53a8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "linear_regression.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "36950964d470baae",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5d99f41b0565f91d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "linear_regression.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Hızlı geçişi aç": false,
+      "graph:Grafik görünümünü aç": false,
+      "canvas:Yeni tuval oluşturun": false,
+      "daily-notes:Bugünün Notunu Aç": false,
+      "templates:Şablon ekle": false,
+      "command-palette:Komut paletini aç": false
+    }
+  },
+  "active": "05b805fef97ecd76",
+  "lastOpenFiles": [
+    "static/Pasted image 20231203220942.png",
+    "static/Pasted image 20231203220930.png",
+    "static/Pasted image 20231203220811.png",
+    "static/Pasted image 20231203220517.png",
+    "static/Pasted image 20231203220501.png",
+    "static/Pasted image 20231203213203.png",
+    "static/Pasted image 20231203215811.png",
+    "linear_regression.md",
+    "static/f_fonk_3.png.md",
+    "static/clustering.png",
+    "static/multiple.png.md",
+    "linear_regression_2.md",
+    "supervised_learning_and_unsupervised_learning.md",
+    "static/w11.png",
+    "static/vektor_1.png",
+    "static/vektor.png",
+    "sasaa.md"
+  ]
+}

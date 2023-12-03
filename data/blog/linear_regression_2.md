@@ -49,7 +49,7 @@ $$ fw,b(x) = 0.1x₁ + 4x₂ + 10x₃ + -2x₄ + 80 $$
 
 Bu parametreleri nasıl yorumlayabileceğimize bir göz atalım. Eğer modelimiz ev fiyatını bin dolar cinsinden tahmin ediyorsa, $b=80$ ifadesi evin başlangıç (taban) fiyatının 80 bin dolar olduğunu gösterir. Evin boyutu, odaların sayısı, kat sayısı veya yaşı hiç önemli değilse (yani bu özelliklerin değerleri 0), $0.1$ ifadesi her bir feet² artışı için ev fiyatının $0.1*1000$ dolar veya 100 dolar artacağını gösterir. Yani her bir feet² için fiyatı bin dolar üzerinden 100 dolar artırırız. Her bir ek yatak odası için ev fiyatı 4 bin dolar artar. Her fazladan kat için ev fiyatı 10 bin dolar artar. Evin yaşı her bir birim arttığında, fiyatı 2 bin dolar azalır, çünkü parametremiz $-2$'dir.
 
-![multiple](/static/multiple.png)
+![multiple](./static/multiple.png)
 
 Burada $n$ özellikli bir model tanımı verilmiştir. Bu ifadeyi daha basit hale getirmek için notasyondan bahsedilecektir. Öncelikle $w_1, w_2, w_3$ gibi $n$ adet sayı içeren bir liste olarak tanımlanabilir. Matematiksel olarak buna vektör denir ve bazen üzerine küçük bir ok işareti çizilir. Bu ok işareti, listenin bir vektör olduğunu hatırlatmak için kullanılır. Benzer şekilde, $b$ bir sayıdır ve $x$ de içinde $x_1, x_2, x_3, x_n$ gibi değerler olan bir satır vektördür. Modelin parametreleri $w$ ve $b$'yi içerir. $x$ ise girdi olarak kabul edilir.
 
@@ -120,7 +120,7 @@ Vektörleştirmenin önemi, özellikle büyük veri kümeleri veya karmaşık ö
 
 Bu nedenle, modern makine öğrenimi algoritmalarını büyük veri kümeleriyle ölçeklendirirken vektörleştirme yöntemlerini kullanmak son derece önemlidir. Vektörleştirme, hesaplamaların daha verimli bir şekilde yapılmasını sağlar ve öğrenme algoritmalarının performansını artırır. Aynı zamanda, kodlar daha okunaklı ve optimize edilmiş hale gelir. Dolayısıyla, vektörleştirme büyük veri kümeleri veya karmaşık modellerle çalışırken kullanılması gereken önemli bir yöntemdir ve modern makine öğrenimi uygulamalarında sıkça kullanılır.
 
-![vektor](/static/vektor.png)
+![vektor](./static/vektor.png)
 
 **Örnek 2**
 
@@ -134,15 +134,15 @@ Vektörleştirme kullanarak, çoklu doğrusal regresyon modellerinde daha veriml
 
 Vektörleştirme, kodların hızını artırırken aynı zamanda daha okunaklı ve optimize edilmiş bir şekilde çalışmasını sağlar. Vektörleştirme, modern makine öğrenimi uygulamalarında kullanılması gereken önemli ve faydalı bir tekniktir. Öğrenme algoritmalarının etkin bir şekilde uygulanabilmesi ve büyük veri setleriyle ölçeklenebilmesi için vektörleştirme yöntemlerine başvurmak önemlidir
 
-![vektor_1](/static/vektor_1.png)
+![vektor_1](./static/vektor_1.png)
 
 ### Multiple Linear Regresyon için Gradiant Descent
 
-![multiple_lineaer](/static/multiple_lineaer.png)
+![multiple_lineaer](./static/multiple_lineaer.png)
 
 Parametrelerimiz w_1'den w_n'ye ve b'ye kadar değişmektedir. Ancak w_1'den w_n'ye ayrı ayrı sayılar yerine, w'leri bir vektör olarak ele alalım. Bu nedenle şimdi w'yi bir vektör olarak düşüneceğiz ve vektörün uzunluğunu w olarak adlandıracağız. Modeli w vektörü olarak tanımlayacak ve b'yi de yine bir sayı olarak kabul edeceğiz. Önceden gerçekleştirdiğimiz çoklu doğrusal regresyonu, şimdi vektör gösterimini kullanarak, modeli f_w olarak ifade edebiliriz: b'ye ek olarak x vektörü ile w'nin nokta çarpımına eşittir. Nokta çarpımının anlamını unutmamız önemlidir. Maliyet fonksiyonunu J olarak tanımlayabilir ve w_1'den w_n'e ve b'ye kadar olan parametrelerle birlikte yazabiliriz. Ancak J'yi bu parametrelerin bir fonksiyonu olarak değil, ayrı ayrı parametreler w_j ve b ile birlikte bir fonksiyon olarak ifade edeceğiz. Bu w_1'den w_n'e kadar olan bu vektörü W ile değiştirebiliriz ve J artık bu girdiyi alarak w vektörü ve bir sayı olan b'yi çıktı olarak üretmektedir. İşte gradyan inişinin nasıl çalıştığını gösteren bir görüntü. Her w_j parametresini tekrar tekrar güncelleyeceğiz. w_j, alfa ile J maliyetinin türevidir; burada J w_1'den w_n'e kadar ve b'ye sahiptir. Tekrar belirtmek gerekirse, bunu J olarak ifade ediyoruz, w vektörü ve b sayısıyla birlikte.
 
-![gradiant_multi](/static/gradient_multi.png)
+![gradiant_multi](./static/gradient_multi.png)
 
 Gradyan inişi ve özellikle türev terimi konusuna bir göz atalım. Gradyan inişi, birden çok özellikle yapıldığında tek bir özellikle karşılaştırıldığında biraz daha karmaşık hale gelir. İşte bu noktada, w için bir güncelleme kuralı ve b için ayrı bir güncelleme kuralı bulunmaktadır. Umarım bu kavramlar size tanıdık geliyor. Burada, J maliyet fonksiyonunun w parametresine göre türeviden bahsediyoruz. Benzer şekilde, b parametresi için de bir güncelleme kuralına sahibiz. Tek değişkenli regresyon durumunda, bu özelliği x_i olarak adlandırırız. Şimdi, n özelliğe sahip olduğumuz bir durumda yeni bir notasyonumuz ortaya çıkar ve n iki veya daha fazla olabilir. Gradyan inişi için bu güncelleme kuralını alırız. w_1'i Alfa çarpı J türevi ile güncelleyelim ve bu formül aslında w_1'e göre J maliyetinin türevidir. Bu türev formülü, tek bir özelliğin durumu için kullanılan türev formülüyle benzerdir, fakat fark, w ve x'in artık vektörler olmasıdır. Ayrıca, sağ tarafta w'ye benzer şekilde, burada x_i'yi x_i_1 olarak adlandırıyoruz. Bu formül sadece J'nin 1 olduğu durumu içerir. Çoklu doğrusal regresyon için, 1'den n'ye kadar değişen J'ye sahip olacağız ve bu nedenle w_1'den w_n'e kadar olan parametreleri güncelleyeceğiz; aynı şekilde b'yi de güncelleyeceğiz. Bu şekilde, çoklu regresyon için gradyan inişini elde ederiz. İşte çoklu regresyon için gradyan inişi bu şekilde gerçekleşir.
 
@@ -184,11 +184,11 @@ Gözlemlediğimiz şey şudur: Bir özelliğin değer aralığı büyükse, örn
 
 Peki, bu durumun gradyan inişiyle ne ilgisi var? Bunu anlamak için, evin boyutunu temsil eden x1 ve evin odalarını temsil eden x2 için bir dağılım grafiğine bakalım. Eğitim verilerini grafiğe döktüğümüzde, yatay eksendeki ölçeğin dikey eksene göre çok daha büyük olduğunu fark ederiz.
 
-![w11](/static/w11.png)
+![w11](./static/w11.png)
 
 Şimdi, maliyet fonksiyonunun kontur grafiğine bir göz atalım. Geniş bir dikey eksene sahip ve dar bir yatay eksene sahip bir kontur grafiği görüyoruz. Örneğin, yatay eksende 0 ile 1 aralığı, dikey eksende ise 10 ile 100 aralığı olabilir. Bu grafikte gördüğümüz oval veya elips şekilleri, bir tarafı diğer tarafından daha kısa olan şekillerdir. Bu, w1 değerindeki küçük bir değişikliğin tahmin edilen değeri büyük ölçüde etkilediği anlamına gelir. Çünkü w1, evin boyutuyla ilişkilendirilmiş büyük sayılarla çarpılmıştır. Öte yandan, tahmin değerini değiştirmek için w2'de daha büyük bir değişiklik yapılması gerekmektedir. Bu nedenle, w2'deki küçük değişiklikler maliyet fonksiyonunu daha az etkiler.
 
-![ddraw](/static/ddraw.png)
+![ddraw](./static/ddraw.png)
 
 Eğer eğitim verilerinizi olduğu gibi kullanırsanız, bu gradyan inişi süreci üzerinde etkili olabilir. Grafikteki elipslerin uzun ve ince olması nedeniyle gradyan inişi, global minimuma ulaşmak için ileri geri giderek uzun bir süre alabilir. Bu tür durumlarda kullanışlı bir yaklaşım, özellikleri ölçeklendirmektir. Basitçe söylemek gerekirse, eğitim verilerinin değerlerini dönüştürmektir. Örneğin, x1 değerlerini 0 ile 1 arasına, x2 değerlerini de 0 ile 1 arasına ölçeklendirebiliriz. Bu durumda, veri noktaları aşağıdaki gibi görünecek ve grafikteki dağılım daha dengeli ve farklı olacaktır.
 
@@ -198,7 +198,7 @@ Eğer eğitim verilerinizi olduğu gibi kullanırsanız, bu gradyan inişi süre
 
 ### Gradiant Descent iyi çalıştığı durumlarda: Learning Curve
 
-![learning_curve](/static/learning_curve.png)
+![learning_curve](./static/learning_curve.png)
 
 Dereceli azalma kuralı şu şekildedir: Dereceli azalmanın etkili bir şekilde çalışması için doğru bir öğrenme oranı (Alfa) seçimi oldukça önemlidir. Dereceli azalmanın etkinliğini doğrulamak için sıkça kullanılan bir yöntem, J fonksiyonunu grafiğe dökmektir. Bu grafik, eğitim verilerinden hesaplanır ve her bir dereceli azalma adımında (iterasyonda), w ve b parametreleri eş zamanlı olarak güncellenir. Bu grafikte, yatay eksende dereceli azalmanın o ana kadar gerçekleştirilen adım sayısı (iterasyon) gösterilir.
 
@@ -214,7 +214,7 @@ Daha somut bir örnek vermek gerekirse, birkaç tekrar için maliyeti grafiğe �
 
 İşte bunun nasıl olduğunu gösteren bir örnek:
 
-![learning_late](/static/learning_late.png)
+![learning_late](./static/learning_late.png)
 
 Burada dikey eksende maliyet fonksiyonu J yer alırken, yatay eksende belirli bir parametre (örneğin w_1) olabilir. Eğer öğrenme oranı çok büyükse, başlangıç noktasından hareket ederseniz, güncelleme adımınız minimumu aşabilir ve buraya ulaşabilirsiniz. Sonraki güncelleme adımında ise buraya aşırı yaklaşabilir ve bu durum devam edebilir. Bu nedenle maliyet bazen azalmak yerine artabilir. Bu sorunu düzeltmek için daha küçük bir öğrenme oranı kullanabilirsiniz. Bu durumda güncellemeleriniz buradan başlayacak, biraz düşecek, biraz daha düşecek ve umarım sürekli olarak azalacak ve global minimuma ulaşacaktır.
 
@@ -224,7 +224,7 @@ Dereceli azalmanın doğru bir şekilde uygulandığından emin olmak için bir 
 
 Önemli bir nokta olarak, öğrenme oranını çok küçük bir değere ayarlamak burada bir hata ayıklama adımı olarak kullanılmaktadır ve gerçekten küçük bir öğrenme oranı seçmek, öğrenme algoritmanızı gerçekten eğitmek için en verimli seçenek olmayacaktır. Ancak, önemli bir denge vardır; öğrenme oranınız çok küçükse, dereceli azalmanın yakınsaması için birçok tekrar gerekebilir.
 
-![learning_rate_2](/static/learning_rate_2.png)
+![learning_rate_2](./static/learning_rate_2.png)
 
 Dereceli azalmayı uygularken genellikle öğrenme oranı olan Alfa için farklı değerler denemeye çalışırım. Örneğin, öğrenme oranını 0.001 olarak deneyebilirim ve ayrıca öğrenme oranını 10 kat daha büyük, örneğin 0.01 veya 0.1 gibi değerler olarak deneyebilirim. Her bir Alfa seçimi için, dereceli azalmayı sadece birkaç yineleme için çalıştırabilir ve maliyet fonksiyonu J'yi yineleme sayısına göre çizdirebilirsiniz.
 
@@ -327,4 +327,4 @@ plt.show()
 
 ```
 
-![multili](/static/multili.png)
+![multili](./static/multili.png)
