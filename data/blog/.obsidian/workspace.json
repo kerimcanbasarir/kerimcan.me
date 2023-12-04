@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linear_regression.md",
+                "file": "sasaa.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linear_regression.md",
+                "file": "sasaa.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linear_regression.md",
+                "file": "sasaa.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linear_regression.md"
+                "file": "sasaa.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   },
   "active": "05b805fef97ecd76",
   "lastOpenFiles": [
+    "linear_regression_2.md",
+    "linear_regression.md",
     "static/Pasted image 20231203220942.png",
     "static/Pasted image 20231203220930.png",
     "static/Pasted image 20231203220811.png",
@@ -155,15 +157,12 @@
     "static/Pasted image 20231203220501.png",
     "static/Pasted image 20231203213203.png",
     "static/Pasted image 20231203215811.png",
-    "linear_regression.md",
     "static/f_fonk_3.png.md",
     "static/clustering.png",
     "static/multiple.png.md",
-    "linear_regression_2.md",
     "supervised_learning_and_unsupervised_learning.md",
     "static/w11.png",
     "static/vektor_1.png",
-    "static/vektor.png",
     "sasaa.md"
   ]
 }
